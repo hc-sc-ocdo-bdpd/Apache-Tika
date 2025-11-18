@@ -25,6 +25,5 @@ Thumbs.db
 desktop.ini
 
 # Project specific
-test_files/
 *.log
 .env
