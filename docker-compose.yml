@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  file-processing:
+    build: .
+    image: file-processing
+    container_name: file-processing-container
+    volumes:
+      - ./test_files:/app/test_files
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    # If you want to run specific commands
+    # command: python demo.py

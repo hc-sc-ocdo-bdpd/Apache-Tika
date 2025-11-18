@@ -1,0 +1,80 @@
+{
+  "basic_info": {
+    "dc:format": "application/pdf; version=1.7",
+    "Content-Type": "application/pdf"
+  },
+  "document_properties": {
+    "pdf:ocrPageCount": "0",
+    "pdf:unmappedUnicodeCharsPerPage": "0",
+    "xmpTPg:NPages": "1",
+    "pdf:charsPerPage": "125"
+  },
+  "technical_details": {
+    "pdf:PDFVersion": "1.7",
+    "pdf:hasXFA": "false",
+    "X-TIKA:Parsed-By-Full-Set": [
+      "org.apache.tika.parser.DefaultParser",
+      "org.apache.tika.parser.pdf.PDFParser"
+    ],
+    "X-TIKA:content_handler": "ToTextContentHandler",
+    "pdf:num3DAnnotations": "0",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Name": "Unclassified",
+    "access_permission:fill_in_form": "true",
+    "pdf:hasCollection": "false",
+    "pdf:encrypted": "false",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Tag": "10, 3, 0, 1",
+    "pdf:containsNonEmbeddedFont": "false",
+    "pdf:hasMarkedContent": "true",
+    "access_permission:can_print_faithful": "true",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_ActionId": "7e883b4c-7a41-4a13-b562-2659d87ee19b",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_ContentBits": "1",
+    "access_permission:extract_for_accessibility": "true",
+    "resourceName": "b'sample.pdf'",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_SiteId": "42fd9015-de4d-4223-a368-baeacab48927",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_ContentBits": "1",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Method": "Standard",
+    "X-TIKA:Parsed-By": [
+      "org.apache.tika.parser.DefaultParser",
+      "org.apache.tika.parser.pdf.PDFParser"
+    ],
+    "X-TIKA:embedded_depth": "0",
+    "pdf:docinfo:producer": "Microsoft® Word for Microsoft 365",
+    "pdf:containsDamagedFont": "false",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Enabled": "true",
+    "access_permission:modify_annotations": "true",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Enabled": "true",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Name": "Unclassified",
+    "dcterms:created": "2025-11-17T18:20:34Z",
+    "dcterms:modified": "2025-11-17T18:20:34Z",
+    "xmpMM:DocumentID": "uuid:60DAB68A-8B89-475C-87FF-77A3E47BAD82",
+    "pdf:overallPercentageUnmappedUnicodeChars": "0.0",
+    "pdf:docinfo:modified": "2025-11-17T18:20:34Z",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Method": "Standard",
+    "Content-Length": "19988",
+    "dc:language": "en",
+    "pdf:producer": "Microsoft® Word for Microsoft 365",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_SiteId": "42fd9015-de4d-4223-a368-baeacab48927",
+    "pdf:totalUnmappedUnicodeChars": "0",
+    "access_permission:assemble_document": "true",
+    "pdf:hasXMP": "true",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_Tag": "10, 3, 0, 1",
+    "access_permission:extract_content": "true",
+    "access_permission:can_print": "true",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_ActionId": "7e883b4c-7a41-4a13-b562-2659d87ee19b",
+    "access_permission:can_modify": "true",
+    "pdf:docinfo:created": "2025-11-17T18:20:34Z"
+  },
+  "dates": {
+    "xmp:CreateDate": "2025-11-17T18:20:34Z",
+    "pdf:docinfo:custom:MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_SetDate": "2025-11-17T18:20:00Z",
+    "xmp:ModifyDate": "2025-11-17T18:20:34Z",
+    "MSIP_Label_05d8ed60-cd71-485b-a85b-277aaf32f506_SetDate": "2025-11-17T18:20:00Z",
+    "X-TIKA:parse_time_millis": "15"
+  },
+  "author_info": {
+    "xmp:CreatorTool": "Microsoft® Word for Microsoft 365",
+    "pdf:docinfo:creator_tool": "Microsoft® Word for Microsoft 365",
+    "pdf:docinfo:creator": "Gill, Joshan (HC/SC)",
+    "dc:creator": "Gill, Joshan (HC/SC)"
+  }
+}
