@@ -44,7 +44,8 @@ if __name__ == "__main__":
     test_files = [
         "test_files/sample.pdf",
         "test_files/sample.docx",
-        "test_files/sample.txt"
+        "test_files/sample.txt",
+        "test_files/sample.sqlite"
     ]
     
     for file_path in test_files:
