@@ -47,15 +47,21 @@ def process_directory(directory_path, output_csv="extraction_results.csv"):
                     "path": file_path,
                     "error": str(e)
                 })
-    
+
     # Save to CSV
     if results:
-        with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+        # Ensure the output directory exists
+        os.makedirs("outputs", exist_ok=True)
+
+        # Build the output path inside the folder
+        output_path = os.path.join("outputs", output_csv)
+
+        with open(output_path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=results[0].keys())
             writer.writeheader()
             writer.writerows(results)
-        
-        print(f"\n✅ Results saved to {output_csv}")
+    
+        print(f"\n✅ Results saved to {output_path}")
         print(f"📊 Processed {len(results)} files")
     
     return results

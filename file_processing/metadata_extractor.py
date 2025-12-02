@@ -1,6 +1,7 @@
 # metadata_extractor.py
 from tika import parser
 import json
+import os
 from datetime import datetime
 
 def extract_detailed_metadata(file_path):
@@ -50,7 +51,10 @@ def save_metadata_to_json(file_path, output_file="metadata.json"):
     """Save metadata to JSON file"""
     metadata = extract_detailed_metadata(file_path)
     
-    with open(output_file, 'w', encoding='utf-8') as f:
+    # Build full output path
+    output_path = os.path.join("outputs", output_file)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, indent=2, ensure_ascii=False)
     
     print(f"\n✅ Metadata saved to {output_file}")
