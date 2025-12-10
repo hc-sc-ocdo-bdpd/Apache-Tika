@@ -1,7 +1,7 @@
 from file_processing import File
 
 # Initialize a File object
-file = File(r"C:\Dev\File Processing\test_files\sample.txt")
+file = File(r"C:\Dev\File Processing\test_files\sample.docx")
 
 # Access metadata
 print(f"File Name: {file.file_name}")

@@ -4,7 +4,8 @@ from file_processing_test_data import get_test_files_path, get_all_test_files
 
 # Get the path to the test files directory
 test_files_path = get_test_files_path()
-file_path = test_files_path / 'HealthCanada.jpeg'
+file_path = test_files_path / 'ocr_text.jpg'
+#file_path = 'C:\Dev\File Processing\\test_files\sample_image.jpeg'
 
 # Wrap the file path in a File processor
 file_processor = File(file_path)

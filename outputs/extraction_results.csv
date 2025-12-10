@@ -1,5 +1,7 @@
 filename,path,mime_type,file_size,word_count,char_count,author,created
+HealthCanada.jpeg,test_files\HealthCanada.jpeg,image/jpeg,8800,0,0,Unknown,Unknown
 sample.docx,test_files\sample.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document,27706,29,227,Unknown,Unknown
 sample.pdf,test_files\sample.pdf,application/pdf,19988,21,193,Unknown,Unknown
 sample.sqlite,test_files\sample.sqlite,application/x-sqlite3,8192,0,0,Unknown,Unknown
 sample.txt,test_files\sample.txt,text/plain; charset=windows-1252,98,17,111,Unknown,Unknown
+sample_image.jpeg,test_files\sample_image.jpeg,image/png,11161,0,0,Unknown,Unknown

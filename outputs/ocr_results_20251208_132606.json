@@ -1,0 +1,47 @@
+[
+  {
+    "filename": "generated_sample.png",
+    "filepath": "test_files/generated_sample.png",
+    "timestamp": "2025-12-08T13:26:06.188983",
+    "file_size_kb": 10.8994140625,
+    "success": true,
+    "mime_type": "image/png",
+    "text": null,
+    "metadata": {
+      "Transparency Alpha": "none",
+      "X-TIKA:Parsed-By-Full-Set": [
+        "org.apache.tika.parser.DefaultParser",
+        "org.apache.tika.parser.image.ImageParser"
+      ],
+      "tiff:ImageLength": "200",
+      "Compression CompressionTypeName": "deflate",
+      "Data BitsPerSample": "8 8 8",
+      "Data PlanarConfiguration": "PixelInterleaved",
+      "IHDR": "width=600, height=200, bitDepth=8, colorType=RGB, compressionMethod=deflate, filterMethod=adaptive, interlaceMethod=none",
+      "Chroma ColorSpaceType": "RGB",
+      "Content-Length": "11161",
+      "tiff:BitsPerSample": "8 8 8",
+      "Content-Type": "image/png",
+      "height": "200",
+      "imagereader:NumImages": "1",
+      "Dimension PixelAspectRatio": "1.0",
+      "resourceName": "b'generated_sample.png'",
+      "Compression NumProgressiveScans": "1",
+      "X-TIKA:Parsed-By": [
+        "org.apache.tika.parser.DefaultParser",
+        "org.apache.tika.parser.image.ImageParser"
+      ],
+      "Chroma BlackIsZero": "true",
+      "Compression Lossless": "true",
+      "width": "600",
+      "X-TIKA:parse_time_millis": "95",
+      "X-TIKA:embedded_depth": "0",
+      "Dimension ImageOrientation": "Normal",
+      "tiff:ImageWidth": "600",
+      "Chroma NumChannels": "3",
+      "Data SampleFormat": "UnsignedIntegral"
+    },
+    "word_count": 0,
+    "char_count": 0
+  }
+]
