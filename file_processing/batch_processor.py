@@ -1,4 +1,7 @@
 # batch_processor.py
+import warnings
+warnings.filterwarnings('ignore')
+
 from tika import parser
 import os
 import csv
@@ -9,7 +12,7 @@ def process_directory(directory_path, output_csv="extraction_results.csv"):
     
     results = []
     
-    print(f"\n🔍 Scanning directory: {directory_path}")
+    print(f"\nScanning directory: {directory_path}")
     print("="*70)
     
     # Get all files in directory
@@ -18,7 +21,6 @@ def process_directory(directory_path, output_csv="extraction_results.csv"):
             file_path = os.path.join(root, filename)
             
             try:
-                print(f"\n📄 Processing: {filename}")
                 
                 # Parse file
                 parsed = parser.from_file(file_path)
@@ -38,10 +40,9 @@ def process_directory(directory_path, output_csv="extraction_results.csv"):
                 }
                 
                 results.append(result)
-                print(f"  ✅ Success - {result['word_count']} words extracted")
                 
             except Exception as e:
-                print(f"  ❌ Error: {str(e)}")
+                print(f"  Error: {str(e)}")
                 results.append({
                     "filename": filename,
                     "path": file_path,
@@ -61,8 +62,8 @@ def process_directory(directory_path, output_csv="extraction_results.csv"):
             writer.writeheader()
             writer.writerows(results)
     
-        print(f"\n✅ Results saved to {output_path}")
-        print(f"📊 Processed {len(results)} files")
+        print(f"\nResults saved to {output_path}")
+        print(f"Processed {len(results)} files\n")
     
     return results
 
