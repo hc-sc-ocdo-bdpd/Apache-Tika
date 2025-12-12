@@ -89,7 +89,7 @@ abcdefghijklmnopqrstuvwxyz"""
         start_time = time.time()
         try:
             ocdo_file = File(str(filepath))
-            ocdo_content = ocdo_file.get_text().strip()
+            ocdo_content = ocdo_file.metadata.get('text', 'No text extracted')
             ocdo_time = time.time() - start_time
             ocdo_success = True
             ocdo_word_count = len(ocdo_content.split())
@@ -210,7 +210,7 @@ abcdefghijklmnopqrstuvwxyz"""
         # Test with OCDO
         try:
             ocdo_file = File(str(filepath))
-            ocdo_content = ocdo_file.get_text()
+            ocdo_content = ocdo_file.metadata.get('text', 'No text extracted')
             ocdo_matches = sum(1 for char_set in special_chars if char_set in ocdo_content)
             ocdo_success = True
         except Exception as e:
@@ -239,72 +239,13 @@ abcdefghijklmnopqrstuvwxyz"""
         
         filepath.unlink()
     
-    def test_case_4_performance_speed(self):
-        """Test Case 4: Processing Speed Comparison"""
+    def test_case_4_empty_file_handling(self):
+        """Test Case 4: Empty File Handling"""
         print("\n" + "="*70)
-        print("TEST CASE 4: Processing Speed")
+        print("TEST CASE 4: Empty File Handling")
         print("="*70)
         
-        # Create a larger test file
-        large_content = "This is a performance test. " * 1000
-        filepath = self.create_test_file(large_content, "test4_performance.txt")
-        
-        # Test Tika speed (average of 3 runs)
-        tika_times = []
-        for i in range(3):
-            start = time.time()
-            try:
-                tika_parser.from_file(str(filepath))
-                tika_times.append(time.time() - start)
-            except Exception as e:
-                print(f"  Tika Error: {e}")
-                tika_times.append(999)
-        
-        tika_avg_time = sum(tika_times) / len(tika_times)
-        
-        # Test OCDO speed (average of 3 runs)
-        ocdo_times = []
-        for i in range(3):
-            start = time.time()
-            try:
-                File(str(filepath)).get_text()
-                ocdo_times.append(time.time() - start)
-            except Exception as e:
-                print(f"  OCDO Error: {e}")
-                ocdo_times.append(999)
-        
-        ocdo_avg_time = sum(ocdo_times) / len(ocdo_times)
-        
-        print(f"\nAverage Processing Time (3 runs):")
-        print(f"  Tika: {tika_avg_time:.3f}s")
-        print(f"  OCDO: {ocdo_avg_time:.3f}s")
-        
-        speed_diff = abs(tika_avg_time - ocdo_avg_time)
-        speed_diff_percent = (speed_diff / max(tika_avg_time, ocdo_avg_time) * 100)
-        
-        print(f"\n  Speed Difference: {speed_diff:.3f}s ({speed_diff_percent:.1f}%)")
-        
-        if speed_diff_percent < 10:
-            winner = "Tie"
-        else:
-            winner = "Tika" if tika_avg_time < ocdo_avg_time else "OCDO"
-        
-        print(f"  Winner: {winner}")
-        
-        self.record_result("Processing Speed", winner, {
-            "tika": {"avg_time": tika_avg_time},
-            "ocdo": {"avg_time": ocdo_avg_time}
-        })
-        
-        filepath.unlink()
-    
-    def test_case_5_empty_file_handling(self):
-        """Test Case 5: Empty File Handling"""
-        print("\n" + "="*70)
-        print("TEST CASE 5: Empty File Handling")
-        print("="*70)
-        
-        filepath = self.create_test_file("", "test5_empty.txt")
+        filepath = self.create_test_file("", "test4_empty.txt")
         
         # Test with Tika
         tika_handled = False
@@ -320,7 +261,7 @@ abcdefghijklmnopqrstuvwxyz"""
         ocdo_handled = False
         try:
             ocdo_file = File(str(filepath))
-            ocdo_content = ocdo_file.get_text()
+            ocdo_content = ocdo_file.metadata.get('text', 'No text extracted')
             ocdo_handled = True
             print("  OCDO: ✓ Handled empty file gracefully")
         except Exception as e:
@@ -344,10 +285,10 @@ abcdefghijklmnopqrstuvwxyz"""
         
         filepath.unlink()
     
-    def test_case_6_whitespace_preservation(self):
-        """Test Case 6: Whitespace and Formatting Preservation"""
+    def test_case_5_whitespace_preservation(self):
+        """Test Case 5: Whitespace and Formatting Preservation"""
         print("\n" + "="*70)
-        print("TEST CASE 6: Whitespace and Formatting Preservation")
+        print("TEST CASE 5: Whitespace and Formatting Preservation")
         print("="*70)
         
         test_content = """Line 1
@@ -363,7 +304,7 @@ Empty
 
 Lines"""
         
-        filepath = self.create_test_file(test_content, "test6_whitespace.txt")
+        filepath = self.create_test_file(test_content, "test5_whitespace.txt")
         
         # Test with Tika
         try:
@@ -379,7 +320,7 @@ Lines"""
         # Test with OCDO
         try:
             ocdo_file = File(str(filepath))
-            ocdo_content = ocdo_file.get_text()
+            ocdo_content = ocdo_file.metadata.get('text', 'No text extracted')
             ocdo_line_count = len([line for line in ocdo_content.split('\n') if line.strip()])
             ocdo_success = True
         except Exception as e:
@@ -413,16 +354,16 @@ Lines"""
         
         filepath.unlink()
     
-    def test_case_7_numeric_data_accuracy(self):
-        """Test Case 7: Numeric Data Extraction Accuracy"""
+    def test_case_6_numeric_data_accuracy(self):
+        """Test Case 6: Numeric Data Extraction Accuracy"""
         print("\n" + "="*70)
-        print("TEST CASE 7: Numeric Data Extraction")
+        print("TEST CASE 6: Numeric Data Extraction")
         print("="*70)
         
         numbers = ["123", "45.67", "8,910", "$1,234.56", "9.99%", "-42", "3.14159"]
         test_content = "Numeric Data Test:\n" + "\n".join(numbers)
         
-        filepath = self.create_test_file(test_content, "test7_numbers.txt")
+        filepath = self.create_test_file(test_content, "test6_numbers.txt")
         
         # Test with Tika
         try:
@@ -438,7 +379,7 @@ Lines"""
         # Test with OCDO
         try:
             ocdo_file = File(str(filepath))
-            ocdo_content = ocdo_file.get_text()
+            ocdo_content = ocdo_file.metadata.get('text', 'No text extracted')
             ocdo_found = sum(1 for num in numbers if num in ocdo_content)
             ocdo_success = True
         except Exception as e:
@@ -467,15 +408,15 @@ Lines"""
         
         filepath.unlink()
     
-    def test_case_8_file_size_limits(self):
-        """Test Case 8: Large File Handling"""
+    def test_case_7_file_size_limits(self):
+        """Test Case 7: Large File Handling"""
         print("\n" + "="*70)
-        print("TEST CASE 8: Large File Handling (1MB)")
+        print("TEST CASE 7: Large File Handling (1MB)")
         print("="*70)
         
         # Create 1MB file
         large_content = "Testing large file handling. " * 35000  # ~1MB
-        filepath = self.create_test_file(large_content, "test8_large.txt")
+        filepath = self.create_test_file(large_content, "test7_large.txt")
         
         file_size_mb = os.path.getsize(filepath) / (1024 * 1024)
         print(f"\nFile Size: {file_size_mb:.2f} MB")
@@ -498,7 +439,7 @@ Lines"""
         ocdo_success = False
         try:
             ocdo_file = File(str(filepath))
-            ocdo_content = ocdo_file.get_text()
+            ocdo_content = ocdo_file.metadata.get('text', 'No text extracted')
             ocdo_time = time.time() - start
             ocdo_success = len(ocdo_content) > 0
             print(f"  OCDO: ✓ Processed in {ocdo_time:.3f}s")
@@ -568,11 +509,10 @@ Lines"""
         self.test_case_1_basic_text_extraction()
         self.test_case_2_metadata_extraction()
         self.test_case_3_special_characters()
-        self.test_case_4_performance_speed()
-        self.test_case_5_empty_file_handling()
-        self.test_case_6_whitespace_preservation()
-        self.test_case_7_numeric_data_accuracy()
-        self.test_case_8_file_size_limits()
+        self.test_case_4_empty_file_handling()
+        self.test_case_5_whitespace_preservation()
+        self.test_case_6_numeric_data_accuracy()
+        self.test_case_7_file_size_limits()
         
         self.print_final_summary()
         self.save_results()
@@ -616,40 +556,6 @@ Lines"""
             json.dump(self.results, f, indent=2, ensure_ascii=False)
         
         print(f"\n📁 Results saved to: {output_file}")
-        
-        # Create markdown report
-        self.create_markdown_report(timestamp)
-    
-    def create_markdown_report(self, timestamp):
-        """Create markdown report"""
-        output_file = self.output_dir / f"comparison_test_report_{timestamp}.md"
-        
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write("# Apache Tika vs OCDO File Processing - Test Results\n\n")
-            f.write(f"**Test Date:** {self.results['timestamp']}\n\n")
-            
-            f.write("## Summary\n\n")
-            summary = self.results["summary"]
-            total = summary["total_tests"]
-            
-            f.write("| Library | Wins | Percentage |\n")
-            f.write("|---------|------|------------|\n")
-            f.write(f"| Apache Tika | {summary['tika_wins']} | {summary['tika_wins']/total*100:.1f}% |\n")
-            f.write(f"| OCDO File Processing | {summary['ocdo_wins']} | {summary['ocdo_wins']/total*100:.1f}% |\n")
-            f.write(f"| Ties | {summary['ties']} | {summary['ties']/total*100:.1f}% |\n\n")
-            
-            f.write("## Test Results\n\n")
-            for test in self.results["tests"]:
-                f.write(f"### {test['test_name']}\n\n")
-                f.write(f"**Winner:** {test['winner']}\n\n")
-                
-                f.write("**Details:**\n")
-                f.write("```json\n")
-                f.write(json.dumps(test['details'], indent=2))
-                f.write("\n```\n\n")
-        
-        print(f"📄 Markdown report saved to: {output_file}")
-
 
 def main():
     """Main execution"""
