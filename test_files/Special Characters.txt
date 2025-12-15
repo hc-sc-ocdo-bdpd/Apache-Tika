@@ -1,0 +1,106 @@
+=== Currency Symbols ===
+€ Euro
+£ Pound Sterling
+¥ Yen
+$ Dollar
+¢ Cent
+₹ Rupee
+₽ Ruble
+₩ Won
+
+=== Mathematical Symbols ===
+± Plus-Minus
+× Multiplication
+÷ Division
+≠ Not Equal
+≈ Approximately Equal
+∞ Infinity
+√ Square Root
+∑ Summation
+∏ Product
+∫ Integral
+∂ Partial Derivative
+π Pi
+½ One Half
+¼ One Quarter
+¾ Three Quarters
+⅓ One Third
+⅔ Two Thirds
+
+=== Greek Letters ===
+α (alpha) β (beta) γ (gamma) δ (delta)
+ε (epsilon) ζ (zeta) η (eta) θ (theta)
+λ (lambda) μ (mu) ν (nu) ξ (xi)
+π (pi) ρ (rho) σ (sigma) τ (tau)
+φ (phi) χ (chi) ψ (psi) ω (omega)
+Α Β Γ Δ Ε Ζ Η Θ Λ Μ Ν Ξ Π Ρ Σ Τ Φ Χ Ψ Ω
+
+=== Arrows & Symbols ===
+→ ← ↑ ↓ ↔ ↕
+⇒ ⇐ ⇑ ⇓ ⇔
+- · ● ○ ◆ ◇ □ ■
+★ ☆ ✓ ✗ ✘ ✚
+
+=== Punctuation & Special ===
+© Copyright
+® Registered Trademark
+™ Trademark
+° Degree
+¡ Inverted Exclamation
+¿ Inverted Question Mark
+§ Section Sign
+¶ Paragraph Mark
+† Dagger
+‡ Double Dagger
+" " Smart Quotes
+' ' Smart Single Quotes
+« » Guillemets
+„ " German Quotes
+… Ellipsis
+— Em Dash
+– En Dash
+
+=== Box Drawing Characters ===
+┌──┬──┐
+│  │  │
+├──┼──┤
+│  │  │
+└──┴──┘
+
+═══╦═══
+   ║   
+═══╬═══
+   ║   
+═══╩═══
+
+=== Emoji & Symbols ===
+☺ ☻ ♥ ♦ ♣ ♠
+☀ ☁ ☂ ☃ ★ ☆
+⚠ ⚡ ⚙ ⚛ ⚜
+♪ ♫ ☎ ✉ ✈ ⌚
+
+=== Asian Characters ===
+Chinese: 你好世界 (Hello World)
+Japanese Hiragana: こんにちは
+Japanese Katakana: カタカナ
+Korean: 안녕하세요
+
+=== Arabic & Hebrew (RTL) ===
+Arabic: مرحبا بك (Welcome)
+Hebrew: שלום (Hello)
+
+=== Accented Characters ===
+àáâãäåæ
+ÀÁÂÃÄÅÆ
+èéêë
+ÈÉÊË
+ìíîï
+ÌÍÎÏ
+òóôõöø
+ÒÓÔÕÖØ
+ùúûü
+ÙÚÛÜ
+ýÿ
+ÝŸ
+ñÑ çÇ
+ßþÞðÐ

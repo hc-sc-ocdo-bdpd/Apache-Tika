@@ -1,0 +1,65 @@
+=== Introduction ===
+Bonjour! Ceci est un document de test en français pour évaluer la capacité 
+d'extraction de texte avec des caractères accentués et des expressions françaises.
+
+=== Les Accents Français ===
+é - accent aigu (acute accent)
+è - accent grave (grave accent)
+ê - accent circonflexe (circumflex)
+ë - tréma (dieresis)
+à, ù - accent grave
+ç - cédille (cedilla)
+
+=== Exemples de Phrases ===
+« La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui. »
+— Déclaration des Droits de l'Homme et du Citoyen (1789)
+
+« Je pense, donc je suis. » — René Descartes
+
+L'été dernier, nous sommes allés à la plage où nous avons mangé des crêpes 
+et bu du café au lait. C'était très agréable!
+
+=== Vocabulaire Courant ===
+Aujourd'hui - Today
+Demain - Tomorrow
+Hier - Yesterday
+S'il vous plaît - Please
+Merci beaucoup - Thank you very much
+De rien - You're welcome
+Excusez-moi - Excuse me
+Quelle heure est-il? - What time is it?
+
+=== Les Nombres ===
+Un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix
+Vingt, trente, quarante, cinquante, soixante
+Soixante-dix (70), quatre-vingts (80), quatre-vingt-dix (90), cent (100)
+
+=== Expressions Idiomatiques ===
+- Avoir le cafard - To feel blue
+- Poser un lapin à quelqu'un - To stand someone up
+- Coûter les yeux de la tête - To cost an arm and a leg
+- Raconter des salades - To tell lies
+- Tomber dans les pommes - To faint
+
+=== La Gastronomie Française ===
+Le croissant, le pain au chocolat, la baguette
+Les escargots, le foie gras, le coq au vin
+La ratatouille, la quiche lorraine, la bouillabaisse
+Les macarons, la crème brûlée, la tarte tatin
+
+=== Citation Littéraire ===
+« L'enfer, c'est les autres. » 
+— Jean-Paul Sartre, Huis Clos (1944)
+
+« Rien ne se perd, rien ne se crée, tout se transforme. »
+— Antoine Lavoisier
+
+=== Géographie de la France ===
+Paris (capitale), Lyon, Marseille, Toulouse, Nice, Nantes, Strasbourg
+La Seine, la Loire, le Rhône, la Garonne
+Les Alpes, les Pyrénées, le Massif central
+La Côte d'Azur, la Bretagne, la Normandie, l'Alsace, la Provence
+
+=== Fin du Document ===
+Merci d'avoir lu ce document de test. 
+Au revoir et à bientôt!
