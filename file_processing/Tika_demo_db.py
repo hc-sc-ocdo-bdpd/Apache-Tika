@@ -41,29 +41,8 @@ def extract_text(file_path):
 
         print("=" * 60)
         return
-
-    # Otherwise, use Tika normally
-    parsed = parser.from_file(file_path)
-    metadata = parsed.get("metadata", {})
-    content = parsed.get("content", "")
-
-    print("\n📋 METADATA:")
-    print("-" * 60)
-    for key, value in list(metadata.items())[:10]:
-        print(f"{key}: {value}")
-
-    print("\n📄 CONTENT PREVIEW:")
-    print("-" * 60)
-    if content:
-        preview = content.strip()[:500]
-        print(preview)
-        if len(content) > 500:
-            print("\n... (truncated)")
     else:
-        print("No content extracted")
-
-    print("=" * 60)
-    return {"metadata": metadata, "content": content}
+        print(file_path, "could not be parsed. Please try again with a .sqlite file!")
 
 
 if __name__ == "__main__":
