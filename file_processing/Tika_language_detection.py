@@ -78,14 +78,22 @@ def detect_language_fasttext(
     text: str,
     model_path: Path,
     top_k: int = 3,
-) -> List[Tuple[str, float]]:
+) -> List[Dict[str, Any]]:
     import fasttext
 
     model = fasttext.load_model(str(model_path))
     labels, probs = model.predict(text, k=top_k)
 
-    # labels look like "__label__en"
-    results = [(lbl.replace("__label__", ""), float(p)) for lbl, p in zip(labels, probs)]
+    results = []
+    for rank, (lbl, prob) in enumerate(zip(labels, probs), start=1):
+        lang_code = lbl.replace("__label__", "")
+        results.append({
+            "rank": rank,
+            "lang_code": lang_code,
+            "lang_name": language_name(lang_code),
+            "confidence": float(prob),
+        })
+
     return results
 
 
@@ -111,24 +119,21 @@ def detect_file_language(
         return {
             "file": str(file_path),
             "tika_metadata_language": metadata.get("language"),
-            "fasttext_predictions": [],
+            "top_languages": [],
             "note": "No extractable text found by Tika (empty content).",
         }
 
     text_norm = normalize_text_for_lid(text, max_chars=max_chars)
-    preds = detect_language_fasttext(text_norm, model_path=model_path, top_k=top_k)
+    top_languages = detect_language_fasttext(
+        text_norm,
+        model_path=model_path,
+        top_k=top_k,
+    )
 
     return {
         "file": str(file_path),
         "tika_metadata_language": metadata.get("language"),
-        "fasttext_predictions": [
-            {
-                "lang": lang,
-                "lang_name": language_name(lang),
-                "prob": prob,
-            }
-            for lang, prob in preds
-        ],
+        "top_languages": top_languages,
         "chars_used": len(text_norm),
     }
 
@@ -156,12 +161,18 @@ def main(argv: List[str]) -> int:
 
 
 if __name__ == "__main__":
-    folder = "test_files"
-    file_path = "test_files\\sample test.pdf" # Change to your test file path
+    file_path = r"test_files\sample test.pdf" # file to test
     result = detect_file_language(file_path)
-    if result["fasttext_predictions"]:
-        top = result["fasttext_predictions"][0]
-        print("The language detected is:", top["lang_name"], f"({top['lang']})")
+
+    if result["top_languages"]:
+        print(f"\nFile: {result['file']}")
+        print("Top 3 detected languages:")
+        for lang in result["top_languages"]:
+            print(
+                f"  {lang['rank']}. "
+                f"{lang['lang_name']} ({lang['lang_code']}): "
+                f"{lang['confidence']:.4f}"
+            )
     else:
-        print("No language detected (no extractable text) for", file_path)
-    raise SystemExit(main(sys.argv))
+        print("No language detected (no extractable text)")
+
