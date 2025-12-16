@@ -75,7 +75,7 @@ class FileDuplicateDetector:
         print(f"\nScanning folder: {self.folder_path}")
         
         if not self.folder_path.exists():
-            print(f"❌ Error: Folder not found: {self.folder_path}")
+            print(f"Error: Folder not found: {self.folder_path}")
             return
         
         # Step 1: Group by size
@@ -104,11 +104,11 @@ class FileDuplicateDetector:
         total_duplicates = sum(len(group['files']) for group in duplicate_groups)
         total_groups = len(duplicate_groups)
         
-        print(f"\n📊 Statistics:")
+        print(f"\nStatistics:")
         print(f"  Duplicate groups found: {total_groups}")
         print(f"  Total duplicate files: {total_duplicates}")
         
-        print(f"\n📁 Duplicate Groups:")
+        print(f"\nDuplicate Groups:")
         for idx, group in enumerate(duplicate_groups, 1):
             print(f"\n  Group {idx}:")
             print(f"    Files: {len(group['files'])}")
@@ -129,7 +129,7 @@ def main():
     test_dir = Path("test_files")
     
     if not test_dir.exists() or len(list(test_dir.iterdir())) == 0:
-        print("\n❌ No files found in 'test_files' folder")
+        print("\nNo files found in 'test_files' folder")
         print("Please add files to the folder and run again.\n")
         return
     

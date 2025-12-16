@@ -301,7 +301,7 @@ Apache-Tika/
 
 ---
 
-## est Files
+## Test Files
 
 The `test_files/` directory contains diverse sample documents:
 
@@ -345,35 +345,5 @@ Run `Metadata_tests.py` to generate detailed comparison reports including:
 - Error handling
 
 Results are saved to `outputs/comparison_test_results_*.json`
-
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/Tika`)
-3. Commit your changes (`git commit -m 'Iniitial commit'`)
-4. Push to the branch (`git push origin feature/Tika`)
-5. Open a Pull Request
-
-### Development Setup
-```bash
-# Install dev dependencies
-pip install -r requirements.txt
-
-# Run tests
-python -m pytest sample_tests/
-
-# Format code
-black file_processing/
-```
-
----
-
-## Contact
-
-For questions or support, please open an issue on GitHub or contact the OCDO team at Health Canada.
 
 ---

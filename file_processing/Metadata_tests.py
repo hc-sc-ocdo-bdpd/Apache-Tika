@@ -534,18 +534,12 @@ Lines"""
         
         print(f"\n{'='*70}")
         if summary['tika_wins'] > summary['ocdo_wins']:
-            print(f"🏆 OVERALL WINNER: Apache Tika")
+            print(f"OVERALL WINNER: Apache Tika")
         elif summary['ocdo_wins'] > summary['tika_wins']:
-            print(f"🏆 OVERALL WINNER: OCDO File Processing")
+            print(f"OVERALL WINNER: OCDO File Processing")
         else:
-            print(f"🤝 RESULT: Tie")
+            print(f"RESULT: Tie")
         print("="*70)
-        
-        # Test-by-test breakdown
-        print("\nDetailed Breakdown:")
-        for test in self.results["tests"]:
-            winner_emoji = "🥇" if test["winner"] in ["Tika", "OCDO"] else "🤝"
-            print(f"  {winner_emoji} {test['test_name']}: {test['winner']}")
     
     def save_results(self):
         """Save results to JSON file"""
