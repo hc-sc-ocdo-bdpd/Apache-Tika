@@ -1,0 +1,95 @@
+=== Basic Arithmetic ===
+Addition: 5 + 3 = 8
+Subtraction: 10 - 4 = 6
+Multiplication: 7 × 6 = 42
+Division: 20 ÷ 4 = 5
+Exponentiation: 2³ = 8
+Square Root: √16 = 4
+
+=== Algebra ===
+Linear Equation: y = mx + b
+Quadratic Formula: x = (-b ± √(b² - 4ac)) / (2a)
+Pythagorean Theorem: a² + b² = c²
+Binomial Expansion: (a + b)² = a² + 2ab + b²
+Factoring: x² - y² = (x + y)(x - y)
+
+=== Calculus ===
+Derivative: dy/dx = lim(h→0) [f(x+h) - f(x)] / h
+Integral: ∫ f(x)dx
+Fundamental Theorem: ∫[a,b] f(x)dx = F(b) - F(a)
+Power Rule: d/dx(xⁿ) = nxⁿ⁻¹
+Product Rule: d/dx(uv) = u(dv/dx) + v(du/dx)
+Chain Rule: dy/dx = (dy/du)(du/dx)
+
+=== Trigonometry ===
+sin²(θ) + cos²(θ) = 1
+tan(θ) = sin(θ) / cos(θ)
+sin(A + B) = sin(A)cos(B) + cos(A)sin(B)
+cos(A + B) = cos(A)cos(B) - sin(A)sin(B)
+Euler's Formula: e^(iπ) + 1 = 0
+
+=== Statistics & Probability ===
+Mean: μ = (Σx) / n
+Standard Deviation: σ = √[Σ(x - μ)² / n]
+Normal Distribution: f(x) = (1/√(2πσ²)) × e^(-(x-μ)²/(2σ²))
+Bayes' Theorem: P(A|B) = [P(B|A) × P(A)] / P(B)
+
+=== Physics ===
+Newton's Second Law: F = ma
+Kinetic Energy: KE = ½mv²
+Potential Energy: PE = mgh
+Einstein's Mass-Energy: E = mc²
+Wave Equation: v = fλ (velocity = frequency × wavelength)
+Planck's Constant: E = hf (where h ≈ 6.626 × 10⁻³⁴ J·s)
+
+=== Chemistry ===
+Ideal Gas Law: PV = nRT
+Molarity: M = n/V (moles per liter)
+pH: pH = -log₁₀[H⁺]
+Gibbs Free Energy: ΔG = ΔH - TΔS
+Reaction Rate: rate = k[A]ᵐ[B]ⁿ
+
+=== Advanced Mathematics ===
+Series: Σ(n=1 to ∞) 1/n²  = π²/6
+Limits: lim(x→0) (sin x)/x = 1
+Matrix Multiplication: [AB]ᵢⱼ = Σₖ AᵢₖBₖⱼ
+Vector Dot Product: A·B = |A||B|cos(θ)
+Cross Product: A×B = |A||B|sin(θ)n̂
+
+=== Set Theory ===
+Union: A ∪ B
+Intersection: A ∩ B
+Subset: A ⊂ B
+Element of: x ∈ A
+Not element of: x ∉ A
+Empty set: ∅
+Universal set: U
+
+=== Logic ===
+AND: ∧
+OR: ∨
+NOT: ¬
+Implies: ⇒
+If and only if: ⇔
+For all: ∀
+There exists: ∃
+
+=== Complex Numbers ===
+Imaginary Unit: i² = -1
+Complex Number: z = a + bi
+Magnitude: |z| = √(a² + b²)
+Euler Form: z = re^(iθ)
+De Moivre's Theorem: (cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ)
+
+=== Number Theory ===
+Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31...
+Fibonacci Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55...
+Golden Ratio: φ = (1 + √5) / 2 ≈ 1.618...
+Euler's Number: e ≈ 2.71828...
+Pi: π ≈ 3.14159...
+
+=== Scientific Notation ===
+Speed of Light: c ≈ 3.0 × 10⁸ m/s
+Avogadro's Number: Nₐ ≈ 6.022 × 10²³ mol⁻¹
+Electron Mass: mₑ ≈ 9.109 × 10⁻³¹ kg
+Proton Mass: mₚ ≈ 1.673 × 10⁻²⁷ kg
