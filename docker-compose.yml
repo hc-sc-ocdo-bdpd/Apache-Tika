@@ -2,13 +2,25 @@ version: '3.8'
 
 services:
   file-processing:
-    build: .
-    image: file-processing
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: apache-tika-comparison:latest
     container_name: file-processing-container
+    
+    # Mount volumes for input/output
     volumes:
       - ./test_files:/app/test_files
-      - ./output:/app/output
+      - ./outputs:/app/outputs
+      - ./models:/app/models
+    
+    # Environment variables
     environment:
       - PYTHONUNBUFFERED=1
-    # If you want to run specific commands
-    # command: python demo.py
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Default command (can be overridden)
+    command: python file_processing/Tika_demo.py
